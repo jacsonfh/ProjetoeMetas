@@ -9,7 +9,7 @@ $(document).ready( function()
    //$('.phone_with_ddd').mask('(00) 0000-0000');
    //$('.telefone').mask(SPMaskBehavior, spOptions);
    //$('#telefone').mask(SPMaskBehavior, spOptions);
-   //$('#telefone').mask('(00) 0000-00009');
+   $('#telefone').mask('(00) 0000-00009');
  }
 );
 //function mask(f){
@@ -64,12 +64,12 @@ $('#telefone').blur(function(event) {
 });
 
 
-function mascarafone(objeto){
-        var aux;
-        aux = '(' + objeto.value.substr(0,2) + ")";
-        aux += objeto.value.substr(2,4)+"-"+objeto.value.substr(6,4);
-        objeto.value = aux;
-}
+//function mascarafone(objeto){
+//        var aux;
+//        aux = '(' + objeto.value.substr(0,2) + ")";
+//        aux += objeto.value.substr(2,4)+"-"+objeto.value.substr(6,4);
+//        objeto.value = aux;
+//}
 
 
 
