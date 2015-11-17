@@ -1,17 +1,14 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+//EM RUN TIME
 $(document).ready( function() 
  {
-   //$('.telefone').mask('(99) 9999-9999?9');
-   //$('.phone_with_ddd').mask('(00) 0000-0000');
-   //$('.telefone').mask(SPMaskBehavior, spOptions);
-   //$('#telefone').mask(SPMaskBehavior, spOptions);
-   $('#telefone').mask('(00) 0000-00009');
+    $("#telefone").mask("(99) 9999-999999");
+ 
  }
 );
+
+//VALIDADOR QUE O ANGELO NAO USOU
+//
 //function mask(f){
 //   tel='(';
 //   var val =f.value.split('');
@@ -38,6 +35,8 @@ $(document).ready( function()
 //   f.value=tel;
 //  }
 
+
+// TENTATIVA QUE AINDA NÃO DEU CERTO DE USAR ABAS NO metas.html
 $(function () {
     $('tab_metas a').click(function (e) {
         e.preventDefault();
@@ -52,25 +51,59 @@ $(function () {
     });
 });
 
+// VALIDA CAMPO TELEFONE DO perfil.html
+$("#telefone").on("blur", function() {
+    var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
 
+    if( last.length == 5 ) {
+        var move = $(this).val().substr( $(this).val().indexOf("-") + 1, 1 );
 
-
-$('#telefone').blur(function(event) {
-   if($(this).val().length == 15){ // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
-      $('#telefone').mask('(00) 00000-0009');
-   } else {
-      $('#telefone').mask('(00) 0000-00009');
-   }
+        var lastfour = last.substr(1,4);
+        
+        var first = $(this).val().substr( 0, 9 );
+        
+        $(this).val( first + move + '-' + lastfour );
+    }
 });
 
 
-//function mascarafone(objeto){
-//        var aux;
-//        aux = '(' + objeto.value.substr(0,2) + ")";
-//        aux += objeto.value.substr(2,4)+"-"+objeto.value.substr(6,4);
-//        objeto.value = aux;
-//}
+//NOVAS VALIDAÇÕES EM TESTE
+
+function enviardados(){
+ 
+if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8)
+{
+alert( "Preencha campo NOME corretamente!" );
+document.dados.tx_nome.focus();
+return false;
+}
+ 
+ 
+if( document.dados.tx_email.value=="" || document.dados.tx_email.value.indexOf('@')==-1 || document.dados.tx_email.value.indexOf('.')==-1 )
+{
+alert( "Preencha campo E-MAIL corretamente!" );
+document.dados.tx_email.focus();
+return false;
+}
+ 
+if (document.dados.tx_mensagem.value=="")
+{
+alert( "Preencha o campo MENSAGEM!" );
+document.dados.tx_mensagem.focus();
+return false;
+}
+ 
+if (document.dados.tx_mensagem.value.length < 50 )
+{
+alert( "É necessario preencher o campo MENSAGEM com mais de 50 caracteres!" );
+document.dados.tx_mensagem.focus();
+return false;
+}
+ 
+return true;
+}
 
 
+//Leia mais em: HTML5 Validator: Validando Formulários com HTML5 http://www.devmedia.com.br/html5-validator-validando-formularios-com-html5/28785#ixzz3rlSCMpMY
 
 
