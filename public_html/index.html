@@ -39,30 +39,34 @@ and open the template in the editor.
 
             <div class="card card-container">
                 <br />
-                <p class="text-center">Acesso ao eMetas</p>
+                <!-- TODO ajustar a fonte-->
+                <!--<p class="text-center">Acesso ao eMetas</p>-->
+                 <p class="text-center">
+                    <i class="glyphicon glyphicon-lock" style="font-size: 24px;"></i> <span style="font-family: Verdana; font-size: 15pt;">Acesso ao eMetas</span>
+                </p>
  
-                <form class="form-group text-center" name="acesso" action="submit" method="post" onSubmit="return validaindex();">
+                <form class="form-group text-center" name="acesso" action="submit" method="post" onSubmit="return validaIndex();">
+                
                     
                     <div class="btn-group">
                         <br/> 
                         <input type="email" name="inputEmail" id="inputEmail" class="row-fluid" placeholder="email" required autofocus>
-                        <a href="perfil.html"><button type="button" class="pull-right">!</button></a>
+                        <!--<a href="perfil.html"><button type="button" class="pull-right">!</button></a>-->
+                        <button type="button" class="pull-right">!</button>
                     </div>              
                     <div class="btn-group">
                         <br/>
                         <input type="password" name="inputPassword" id="inputPassword" class="row-fluid" placeholder="senha" required>
-                        <a href="senha.html"><button type="button" class="pull-right">?</button></a>
+                        <!--<a href="senha.html"><button type="button" class="pull-right">?</button></a>-->
+                        <button type="button" class="pull-right">?</button>
                     </div>
                     
                     <div class="btn-group">
                         <div class="btn-group-sm">
                             <br/>
-                            <a href="manual.pdf">
-                                <button type="button" class="btn btn-default">Ajuda</button>
-                            </a>
-                            <a href="perfil.html">
-                                <button  type="submit" class="btn btn-default" >Acesso</button>
-                            </a>
+                            <button type="button" class="btn btn-default">Ajuda</button>
+                            <button  type="submit" class="btn btn-default" >Acesso</button>
+                           
                         </div>
                     </div>
 
