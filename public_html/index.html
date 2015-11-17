@@ -41,7 +41,7 @@ and open the template in the editor.
                 <br />
                 <p class="text-center">Acesso ao eMetas</p>
  
-                <form class="form-group text-center">
+                <form class="form-group text-center" name="acesso" action="submit" method="post" onSubmit="return validaindex();">
                     
                     <div class="btn-group">
                         <br/> 
@@ -57,9 +57,12 @@ and open the template in the editor.
                     <div class="btn-group">
                         <div class="btn-group-sm">
                             <br/>
-                            
-                            <a href="manual.pdf"><button type="button" class="btn btn-default">Ajuda</button></a>
-                            <a href="perfil.html"><button  type="button" class="btn btn-default">Acesso</button></a>
+                            <a href="manual.pdf">
+                                <button type="button" class="btn btn-default">Ajuda</button>
+                            </a>
+                            <a href="perfil.html">
+                                <button  type="submit" class="btn btn-default" >Acesso</button>
+                            </a>
                         </div>
                     </div>
 

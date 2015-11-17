@@ -67,43 +67,28 @@ $("#telefone").on("blur", function() {
 });
 
 
-//NOVAS VALIDAÇÕES EM TESTE
 
-function enviardados(){
+//VALIDAÇÃO DO INDEX
+function validaindex(){
  
-if(document.dados.tx_nome.value=="" || document.dados.tx_nome.value.length < 8)
-{
-alert( "Preencha campo NOME corretamente!" );
-document.dados.tx_nome.focus();
-return false;
-}
- 
- 
-if( document.dados.tx_email.value=="" || document.dados.tx_email.value.indexOf('@')==-1 || document.dados.tx_email.value.indexOf('.')==-1 )
-{
-alert( "Preencha campo E-MAIL corretamente!" );
-document.dados.tx_email.focus();
-return false;
-}
- 
-if (document.dados.tx_mensagem.value=="")
-{
-alert( "Preencha o campo MENSAGEM!" );
-document.dados.tx_mensagem.focus();
-return false;
-}
- 
-if (document.dados.tx_mensagem.value.length < 50 )
-{
-alert( "É necessario preencher o campo MENSAGEM com mais de 50 caracteres!" );
-document.dados.tx_mensagem.focus();
-return false;
-}
- 
-return true;
-}
+    if( document.acesso.inputemail.value=="" || document.acesso.inputemail.value.indexOf('@')==-1 || document.acesso.inputemail.value.indexOf('.')==-1 )
+    {
+        alert( "Preencha campo e-mail corretamente!" );
+        document.acesso.inputemail();
+        return false;
+    }
 
+    if(document.acesso.inputpassword.value=="")
+    {
+        alert( "Preencha campo e-mail corretamente!" );
+        document.acesso.inputpassword.focus();
+        return false;
+    }
+}
 
 //Leia mais em: HTML5 Validator: Validando Formulários com HTML5 http://www.devmedia.com.br/html5-validator-validando-formularios-com-html5/28785#ixzz3rlSCMpMY
 
+//ANOTAÇÕES
+//|| document.dados.tx_nome.value.length < 8
+// <form action="pagina de ação" method="post" name="dados" onSubmit="return enviardados();" >
 
