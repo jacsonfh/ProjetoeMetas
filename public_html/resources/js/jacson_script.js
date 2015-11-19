@@ -3,7 +3,7 @@
 $(document).ready( function() 
  {
     $("#telefone").mask("(99) 9999-999999");
- 
+    init();
  }
 );
 
@@ -68,18 +68,31 @@ $("#telefone").on("blur", function() {
 
 
 //VALIDAÇÃO DO INDEX
-function validaIndex() {
+//function validaIndex() {
+//
+//
+//}
 
-    if ($("#acesso:inputEmail").val() === ""
-            || $("#acesso:inputEmail").val().indexOf('@') === -1
-            || $("#acesso:inputEmail").val().indexOf('.') === -1) {
-        $("#acesso:inputEmail").css({
-            "border-style": "solid",
-            "border-color": "red"
-        });
-        $("acesso:inputEmail").focus();
-        return false;
+function validaEnviaFormulario() {
+    
+     if ($("#frmLogin:inputEmail").val() === ""
+            || $("#frmLogin:inputEmail").val().indexOf('@') === -1
+            || $("#frmLogin:inputEmail").val().indexOf('.') === -1) {
+        $("#danger").css("display", "block");
+        $("frmLogin:inputEmail").focus();
     }
+       
+    
+//        if ($("#acesso:inputEmail").val() === ""
+//            || $("#acesso:inputEmail").val().indexOf('@') === -1
+//            || $("#acesso:inputEmail").val().indexOf('.') === -1) {
+//        $("#acesso:inputEmail").css({
+//            "border-style": "solid",
+//            "border-color": "red"
+//        });
+//        $("acesso:inputEmail").focus();
+//        $("#danger").css("display", "block");
+//    }
     
         if ($("#acesso:inputPassword").val() === ""
             || $("#acesso:inputPassword").val().length < ('2') === -1 ){
@@ -88,15 +101,53 @@ function validaIndex() {
             "border-color": "red"
         });
         $("acesso:inputPassword").focus();
-        return false;
-    }
+        $("#warn").css("display", "block");
+    } 
 }
 
-function validaEnviaFormulario() {
-    alert('TESTE'); 
+function init() {
+    $("#success").css("display", "none");
+    $("#info").css("display", "none");
+    $("#warn").css("display", "none");
+    $("#danger").css("display", "none"); 
 }
+
+
+(function($,W,D) { 
+     var jedi = {};
+     jedi.Padawan =
+            {
+                validarFormulario: function ()
+                {
+                    $("#frmLogin").validate({
+                        rules: {
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            password: {
+                                required: true,
+                                minlength: 5
+                            }
+                        },
+                        messages: {
+                            password: {
+                                required: "Por Favor, entre com uma senha",
+                                minlength: "Sua senha deve ter pelo menos 5 caracter"
+                            },
+                            email: "Por favor, entre com um email valido.",
+                        },
+                        submitHandler: function (form) {
+                            form.submit();
+                        }
+                    });
+                }
+            }
+})(jQuery, window, document);
+
+
 
 //VALIDAÇÃO DO PERFIL
-function validaPerfil(){
-    if ($("#perfil:"))
-}
+//function validaPerfil(){
+//    
+//}

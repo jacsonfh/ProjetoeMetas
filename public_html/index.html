@@ -43,7 +43,7 @@ and open the template in the editor.
                     <i class="glyphicon glyphicon-lock" style="font-size: 24px;"></i> <span style="font-family: Verdana; font-size: 15pt;">Acesso...</span>
                 </p>
  
-                <form class="form-group text-center" name="acesso" method="post" ><!--onSubmit="return validaIndex();"-->
+                <form class="form-group text-center" name="acesso" method="post"  id="frmLogin"><!--onSubmit="return validaIndex();"-->
                 
                     
                     <div class="btn-group">
@@ -62,10 +62,9 @@ and open the template in the editor.
                     <div class="btn-group">
                         <div class="btn-group-sm">
                             <br/>
-                             <a href="#">
-                                <button type="button" class="btn btn-default">Ajuda</button>
-                             </a>
-                            <button  type="submit" class="btn btn-default" onclick="validaEnviaFormulario();">Acesso</button>
+                            <button type="button" class="btn btn-default">Ajuda</button>
+                             
+                            <button  type="button" class="btn btn-default" onclick="validaEnviaFormulario();">Acesso</button>
                                 <!--<button onclick="JavaScript:alert('Well done!')">Click Me!</button>-->
                             
                         </div>
@@ -78,14 +77,15 @@ and open the template in the editor.
               <!--conteúdo do rodapé-->
                 <div class="content">
                     <br />
-                    <hr style="border: 1px solid gray">
-                    <div class="alert alert-success" role="alert">...</div>
-                    <div class="alert alert-info" role="alert">...</div>
-                    <div class="alert alert-warning" role="alert">...</div>
-                    <div class="alert alert-danger" role="alert">...</div>
+                  
+                    <div id="success" class="alert alert-success" role="alert">...</div>
+                    <div id="info" class="alert alert-info" role="alert">...</div>
+                    <div id="warn" class="alert alert-warning" role="alert">...</div>
+                    <div id="danger" class="alert alert-danger" role="alert">...</div>
                 </div>
             </div>       
         <!--Scripts -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="resources/js/bootstrap.min.js"></script>
         <script src="resources/js/jacson_script.js"></script>
