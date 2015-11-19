@@ -92,6 +92,10 @@ function validaIndex() {
     }
 }
 
+function validaEnviaFormulario() {
+    alert('TESTE'); 
+}
+
 //VALIDAÇÃO DO PERFIL
 function validaPerfil(){
     if ($("#perfil:"))
