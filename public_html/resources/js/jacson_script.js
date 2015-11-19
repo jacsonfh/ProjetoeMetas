@@ -82,7 +82,7 @@ function validaIndex() {
     }
     
         if ($("#acesso:inputPassword").val() === ""
-            || $("#acesso:inputPassword").val().length < ('2') === -1 {
+            || $("#acesso:inputPassword").val().length < ('2') === -1 ){
         $("#acesso:inputPassword").css({
             "border-style": "solid",
             "border-color": "red"
@@ -90,6 +90,9 @@ function validaIndex() {
         $("acesso:inputPassword").focus();
         return false;
     }
-
 }
 
+//VALIDAÇÃO DO PERFIL
+function validaPerfil(){
+    if ($("#perfil:"))
+}
