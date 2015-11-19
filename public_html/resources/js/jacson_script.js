@@ -67,28 +67,29 @@ $("#telefone").on("blur", function() {
 });
 
 
-
 //VALIDAÇÃO DO INDEX
-function validaindex(){
- 
-    if( document.acesso.inputemail.value=="" || document.acesso.inputemail.value.indexOf('@')==-1 || document.acesso.inputemail.value.indexOf('.')==-1 )
-    {
-        alert( "Preencha campo e-mail corretamente!" );
-        document.acesso.inputemail();
+function validaIndex() {
+
+    if ($("#acesso:inputEmail").val() === ""
+            || $("#acesso:inputEmail").val().indexOf('@') === -1
+            || $("#acesso:inputEmail").val().indexOf('.') === -1) {
+        $("#acesso:inputEmail").css({
+            "border-style": "solid",
+            "border-color": "red"
+        });
+        $("acesso:inputEmail").focus();
+        return false;
+    }
+    
+        if ($("#acesso:inputPassword").val() === ""
+            || $("#acesso:inputPassword").val().length < ('2') === -1 {
+        $("#acesso:inputPassword").css({
+            "border-style": "solid",
+            "border-color": "red"
+        });
+        $("acesso:inputPassword").focus();
         return false;
     }
 
-    if(document.acesso.inputpassword.value=="")
-    {
-        alert( "Preencha campo e-mail corretamente!" );
-        document.acesso.inputpassword.focus();
-        return false;
-    }
 }
-
-//Leia mais em: HTML5 Validator: Validando Formulários com HTML5 http://www.devmedia.com.br/html5-validator-validando-formularios-com-html5/28785#ixzz3rlSCMpMY
-
-//ANOTAÇÕES
-//|| document.dados.tx_nome.value.length < 8
-// <form action="pagina de ação" method="post" name="dados" onSubmit="return enviardados();" >
 
