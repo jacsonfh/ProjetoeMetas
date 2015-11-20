@@ -80,29 +80,13 @@ function validaEnviaFormulario() {
             || $("#frmLogin:inputEmail").val().indexOf('.') === -1) {
         $("#danger").css("display", "block");
         $("frmLogin:inputEmail").focus();
-    }
+     }
        
-    
-//        if ($("#acesso:inputEmail").val() === ""
-//            || $("#acesso:inputEmail").val().indexOf('@') === -1
-//            || $("#acesso:inputEmail").val().indexOf('.') === -1) {
-//        $("#acesso:inputEmail").css({
-//            "border-style": "solid",
-//            "border-color": "red"
-//        });
-//        $("acesso:inputEmail").focus();
-//        $("#danger").css("display", "block");
-//    }
-    
-        if ($("#acesso:inputPassword").val() === ""
-            || $("#acesso:inputPassword").val().length < ('2') === -1 ){
-        $("#acesso:inputPassword").css({
-            "border-style": "solid",
-            "border-color": "red"
-        });
-        $("acesso:inputPassword").focus();
+     if ($("#frmLogin:inputPassword").val() === ""
+            || $("#frmLogin:inputPassword").val().length < ('5') === -1 ){
         $("#warn").css("display", "block");
-    } 
+        $("frmLogin:inputPassword").focus();
+     } 
 }
 
 function init() {
@@ -135,14 +119,14 @@ function init() {
                                 required: "Por Favor, entre com uma senha",
                                 minlength: "Sua senha deve ter pelo menos 5 caracter"
                             },
-                            email: "Por favor, entre com um email valido.",
+                            email: "Por favor, entre com um email valido."
                         },
                         submitHandler: function (form) {
                             form.submit();
                         }
                     });
                 }
-            }
+            };
 })(jQuery, window, document);
 
 
