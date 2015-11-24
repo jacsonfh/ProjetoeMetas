@@ -105,21 +105,27 @@ function init() {
                 {
                     $("#frmLogin").validate({
                         rules: {
-                            email: {
+                            inputEmail: {
                                 required: true,
                                 email: true
                             },
-                            password: {
+                            inputPassword: {
                                 required: true,
                                 minlength: 5
                             }
                         },
                         messages: {
-                            password: {
+                            inputPassword: {
                                 required: "Por Favor, entre com uma senha",
                                 minlength: "Sua senha deve ter pelo menos 5 caracter"
                             },
-                            email: "Por favor, entre com um email valido."
+                            
+                            inputEmail: {
+                                required: "Por favor, entre com um email valido.",
+                                minlength: "Digite um e-mail válido"
+                            }
+                            
+
                         },
                         submitHandler: function (form) {
                             form.submit();
