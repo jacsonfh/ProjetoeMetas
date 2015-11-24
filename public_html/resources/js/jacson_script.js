@@ -67,12 +67,6 @@ $("#telefone").on("blur", function() {
 });
 
 
-//VALIDAÇÃO DO INDEX
-//function validaIndex() {
-//
-//
-//}
-
 function validaEnviaFormulario() {
     
      if ($("#frmLogin:inputEmail").val() === ""
