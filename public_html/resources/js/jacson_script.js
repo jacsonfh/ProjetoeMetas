@@ -135,3 +135,13 @@ function init() {
 //function validaPerfil(){
 //    
 //}
+$.ajax({
+  method: "POST",
+  url: "some.php", //Enderço do Servlet "/ajax"
+  data: { name: "John", location: "Boston" } //dados dos inputs tipo $("#email").val()
+})
+  .done(function( msg ) {
+    alert( "Data Saved: " + msg );
+  });
+  
+  //data: {email: $("#email").val(), telefone: $("#fone").val()}
