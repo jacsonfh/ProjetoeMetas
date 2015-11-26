@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/11/2015, 13:14:27
+    Author     : jacsonfh
+*/
+
+
+#box{
+width: 387px;
+height: 217px;
+
+border: 2px rgb(89,89,89) solid;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+
+position: absolute;
+
+}
+
+
+#boxcima{
+    alignment-adjust: central;
+    /*definimos a largura do box*/
+    width:100%;
+    /* definimos a altura do box */
+    height:200px;
+    /* definimos a cor de fundo do box */
+    background-color:#D3D3D3;
+    /* definimos o quão arredondado irá ficar nosso box */
+    border-radius: 10px;
+    /* definindo cor da linha */
+    border:#000000;
+    float: top;
+    }
+    
+#boxbaixo{
+    alignment-adjust: central;
+    /*definimos a largura do box*/
+    width:100%;
+    /* definimos a altura do box */
+    height:100px;
+    /* definimos a cor de fundo do box */
+    background-color:#f4D3D3;
+    /* definimos o quão arredondado irá ficar nosso box */
+    border-radius: 10px;
+    /* definindo cor da linha */
+    border:#000000;
+    float: bottom;
+    }
+
+#boxesquerda{
+    alignment-adjust: central;
+    /*definimos a largura do box*/
+    width:20%;
+    /* definimos a altura do box */
+    height:100%;
+    /* definimos a cor de fundo do box */
+    background-color:#9966ff;
+    /* definimos o quão arredondado irá ficar nosso box */
+    border-radius: 10px;
+    /* definindo cor da linha */
+    border:#000000;
+    float: left;
+    }
+    
+#boxdireita{
+    alignment-adjust: central;
+    /*definimos a largura do box*/
+    width:20%;
+    /* definimos a altura do box */
+    height:100%;
+    /* definimos a cor de fundo do box */
+    background-color:#D3D3D3;
+    /* definimos o quão arredondado irá ficar nosso box */
+    border-radius: 10px;
+    /* definindo cor da linha */
+    border:#000000;
+    float: right;
+    }
