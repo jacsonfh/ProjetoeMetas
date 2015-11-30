@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:: eMetas Site Motor Realizador de Metas ::</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Aqui configuração dos estilos. -->
+        <link href="resources/css/jacson_style.css" rel="stylesheet">
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Aqui fim da configuração dos estilos. -->
+        
+    </head>
+    <body>
+        <!-- Perfil -->
+        <div class="container-fluid">
+            <div class="col-lg-12">
+              <!--conteúdo do cabeçalho-->
+                <div class="content">
+                    <hr style="border: 1px solid gray">
+                    <p align="right">  <img class="img-responsive" src="resources/img/e-Metaslogo.jpg" width="32" height="32" alt="e-Metaslogo"/> </p>
+                </div>
+            </div>
+             <div class="row-fluid">
+                <div class="col-lg-2">
+                  <!--MENU-->
+                    <div class="content">
+                        <br />
+                        <ul class="btn-group-vertical btn-sm">
+                          <li role="presentation" class="btn btn-default btn-sm"> <a href="perfil.html">Perfil</a></li>
+                          <br />
+                          <img class="img-thumbnail" src="resources/img/semfoto.png" width="80" height="80" alt="SemFoto"/>
+                          <br /><br />
+                          <p><label class="control-label col-sm-2" for="login">usuario@</label></p><br>
+                          <hr style="border: 1px solid gray">
+                          <li role="presentation" class="btn btn-default btn-sm"> <a href="metas.html">Metas</a></li>
+                          <br />
+                          <br />
+                          <br />
+                          <br />
+                          <br />
+                          <br />
+                          <li role="presentation" class="btn btn-default btn-sm"> <a href="manual.pdf">Manual</a></li>
+                          <li role="presentation" class="btn btn-default btn-sm"> <a href="inicial.html">Sair</a></li>
+                        </ul>
+                        <br />
+                 
+                    </div>
+                </div>
+                <!--FIM MENU-->
+                
+                <div id="metas" class="col-lg-10"> <!--style="border: 1px solid gray" style="background-color: darkgrey;">-->
+                    <!--Conteúdo do corpo-->
+                    <br /><br />
+                    <ul id="tabs_sistem" class="nav nav-tabs">
+                        
+                        <li class="active"><a href="metas.html" data-toggle="tab" id="tab_metas">Metas</a></li>
+                        <li ><a href="resultados.html" data-toggle="tab" id="tab_resultados">Resultados</a></li>
+
+                            <table border="1" class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <!--Código:|Data:|Hora:|Tarefa:|Prioridade:| Decisão:|Delegar:| Tipo:|Custo:|Avisar:-->  
+                                  <th>Código:</th>
+                                  <th>Data:</th>
+                                  <th>Hora:</th>
+                                  <th>Tarefa:</th>
+                                  <th>Prioridade:</th>
+                                  <th>Decisão:</th>
+                                  <th>Delegar:</th>
+                                  <th>Tipo:</th>
+                                  <th>Custo:</th>
+                                  <th>Avisar:</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                   <!--0001|01/01/16|15:00|Ação comum exemplo| Urgênte |Fazer,Aguardar,Concluído|Sim|Categoria|10.000,00|Sim -->
+                                  <td>0001</td>
+                                  <td>01/01/16</td>
+                                  <td>15:00</td>
+                                  <td>Ação comum exemplo</td>
+                                  <td>Urgênte</td>
+                                  <td>Fazer</td>
+                                  <td>Sim</td>
+                                  <td>Categoria</td>
+                                  <td>10.000,00</td>
+                                  <td>Sim</td>
+                                </tr>
+                                <tr>
+                                  <td>0002</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>0003</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>0004</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>0005</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                    </ul>
+                      <div class="form-group">
+                        <div class="btn-group col-lg-offset-3">  
+                            <div class="btn-group-sm">
+                              <br />
+                              <a href="#"><button type="button" class="btn btn-default">Ajuda</button></a>
+                              <a href="#"><button type="button" class="btn btn-default">Ativar Todos</button></a>
+                              <a href="#"><button type="button" class="btn btn-default">Nova Linha</button></a>
+                              <a href="#"><button type="button" class="btn btn-default">Excluir Meta</button></a>
+                              <a href="#"><button type="button" class="btn btn-default">Salvar Tudo</button></a>
+                            </div>
+                        </div>  
+                      </div>
+                        
+                    <!--Fim do corpo-->
+                </div>
+             </div>
+                
+            <div class="col-lg-12">
+              <!--conteúdo do rodapé-->
+                <div class="content">
+                    <hr style="border: 1px solid gray">
+                </div>
+            </div>
+        </div>
+        <!-- Fim Perfil -->    
+        <!--Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/jacson_script.js"></script>
+        <!-- Fim Scripts. -->    
+    </body>
+</html>
+
+<!--                          <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                  <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                  </div>
+                                </div>
+                              </div>
+
+style="border: 1px solid gray"
+
+<pre>Perfil</pre>
+
+text-center
+-->
