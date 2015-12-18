@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author jacsonfh
  */
 @WebServlet(name = "Loucura", urlPatterns = {"/loucura"})
-public class Loucura extends HttpServlet {
+public class validacao extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,7 +34,7 @@ public class Loucura extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String nome = request.getParameter("nome");
-        if (nome.equals("jacson")) { out.println("Maluco"); } else { out.println("Normal"); }
+        if (nome.equals("jacson")) { out.println("Teste"); } else { out.println("Normal"); }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
