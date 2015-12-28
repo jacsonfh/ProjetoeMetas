@@ -25,7 +25,7 @@ $("#telefone").on("blur", function () {
 function acessar() {
     $.ajax({
         method: "POST",
-        url:"http://localhost:8080/ProjetoeMetas/loucura",
+        url:"http://localhost:8080/ProjetoeMetas/validacao",
         data: "email=$('#frmLogin:inputEmail').val()"
         data: "password=$('#frmLogin:inputPassword').val()"
     });
