@@ -19,9 +19,19 @@ $("#telefone").on("blur", function () {
 });
 
 function acessar() {
+    email = $("inputEmail").val();
+    pass = $("inputPassword").val();
     $.ajax({
         method: "POST",
-        url:"/ProjetoeMetas/validacao",
-        data: "email=$('#frmLogin:inputEmail').val()"
-        data1: "password=$('#frmLogin:inputPassword').val()"
+        url: "/ProjetoeMetas/validacao",
+        data: "email=" + email + "&password=" + pass
     });
+
+
+
+//function acessar() {
+//    $.ajax({
+//        method: "POST",
+//        url:"http://localhost:8080/ProjetoeMetas/validacao",
+//        data: "email=$('#frmLogin:inputEmail').val() & password=$('#frmLogin:inputPassword').val()";
+//    });

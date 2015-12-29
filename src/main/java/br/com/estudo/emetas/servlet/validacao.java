@@ -33,9 +33,9 @@ public class validacao extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String nome = request.getParameter("nome");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
-        if (nome.equals("jacsonfh@gmail.com")) {
+        if (email.equals("a@a.com")) {
             request.getRequestDispatcher("perfil.html").forward(request, response);
         } else {
             request.getRequestDispatcher("senha.html").forward(request, response);
