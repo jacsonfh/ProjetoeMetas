@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.estudo.emetas.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,8 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jacsonfh
  */
-@WebServlet(name = "Validação", urlPatterns = {"/validacao"})
-public class validacao extends HttpServlet {
+public class simples extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,12 +26,21 @@ public class validacao extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String nome = request.getParameter("nome");
-        String password = request.getParameter("password");
-        if (nome.equals("jacson@gmail.com")) {
-            request.getRequestDispatcher("perfil.html").forward(request, response);
-        } else {
-            request.getRequestDispatcher("senha.html").forward(request, response);
+        try {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<?xml version = \"1.0\"?>");
+            out.printf( "%s%s%s", "<!DOCTYPE html PUBLIC", " \"-//W3C//DTD XHTML 1.0 Strict//EN\"", " \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" );
+            out.println( "<html xmlns = \"http://www.w3.org/1999/xhtml\">" );
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Simples By Jacson</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet simples at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        } finally {
+            out.close();
         }
     }
 
@@ -80,4 +82,5 @@ public class validacao extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }
