@@ -21,7 +21,7 @@ $("#telefone").on("blur", function () {
 function acessar() {
     $.ajax({
         method: "POST",
-        url:"http://localhost:8080/ProjetoeMetas/validacao",
+        url:"/ProjetoeMetas/validacao",
         data: "email=$('#frmLogin:inputEmail').val()"
         data1: "password=$('#frmLogin:inputPassword').val()"
     });

@@ -35,7 +35,7 @@ public class validacao extends HttpServlet {
         PrintWriter out = response.getWriter();
         String nome = request.getParameter("nome");
         String password = request.getParameter("password");
-        if (nome.equals("jacson@gmail.com")) {
+        if (nome.equals("jacsonfh@gmail.com")) {
             request.getRequestDispatcher("perfil.html").forward(request, response);
         } else {
             request.getRequestDispatcher("senha.html").forward(request, response);
