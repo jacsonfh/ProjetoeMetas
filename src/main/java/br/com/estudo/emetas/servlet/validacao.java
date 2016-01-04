@@ -7,6 +7,7 @@ package br.com.estudo.emetas.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,13 +33,18 @@ public class validacao extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+
+        String uri = request.getContextPath() + "/paginas";
+
         PrintWriter out = response.getWriter();
-        String email = request.getParameter("email");
+        String nome = request.getParameter("email");
         String password = request.getParameter("password");
-        if (email.equals("a@a.com")) {
-            request.getRequestDispatcher("perfil.html").forward(request, response);
+        if (nome.equals("jacsonfh@gmail.com")) {
+            uri += "/perfil.html";
+            response.sendRedirect(uri);
         } else {
-            request.getRequestDispatcher("senha.html").forward(request, response);
+            uri += "/senha.html";
+            response.sendRedirect(uri);
         }
     }
 
