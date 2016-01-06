@@ -2,8 +2,6 @@
 //EM RUN TIME
 $(document).ready(function ()
 {
-    $("#telefone").mask("(99) 9999-999999");
-    init();
 }
 );
 
@@ -19,19 +17,11 @@ $("#telefone").on("blur", function () {
 });
 
 function acessar() {
-    email = $("inputEmail").val();
-    pass = $("inputPassword").val();
+    var email = $('#inputEmail').val();
+    var password = $('#inputPassword').val();
     $.ajax({
         method: "POST",
         url: "/ProjetoeMetas/validacao",
-        data: "email=" + email + "&password=" + pass
+        data: "email=" + email + "&password=" + password
     });
-
-
-
-//function acessar() {
-//    $.ajax({
-//        method: "POST",
-//        url:"http://localhost:8080/ProjetoeMetas/validacao",
-//        data: "email=$('#frmLogin:inputEmail').val() & password=$('#frmLogin:inputPassword').val()";
-//    });
+}
