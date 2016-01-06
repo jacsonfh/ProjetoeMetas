@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.estudo.emetas.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jacsonfh
  */
-@WebServlet(name = "Validação", urlPatterns = {"/validacao"})
+@WebServlet(name = "validacao", urlPatterns = {"/validacao"})
 public class validacao extends HttpServlet {
 
     /**
@@ -33,16 +28,14 @@ public class validacao extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
         String uri = request.getContextPath() + "/paginas";
-
         PrintWriter out = response.getWriter();
         String nome = request.getParameter("email");
         String password = request.getParameter("password");
-        if (nome.equals("jacsonfh@gmail.com")) {
+        if (nome.equals("jacsonfh@gmail.com") && (password.equals("123")) ) {
             uri += "/perfil.html";
             response.sendRedirect(uri);
-        } else {
+        } else{
             uri += "/senha.html";
             response.sendRedirect(uri);
         }
