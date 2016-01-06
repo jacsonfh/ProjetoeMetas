@@ -35,7 +35,7 @@ public class validacao extends HttpServlet {
         if (nome.equals("jacsonfh@gmail.com") && (password.equals("123")) ) {
             uri += "/perfil.html";
             response.sendRedirect(uri);
-        } else{
+        } else {
             uri += "/senha.html";
             response.sendRedirect(uri);
         }
