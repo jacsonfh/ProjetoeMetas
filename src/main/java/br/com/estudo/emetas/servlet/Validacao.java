@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author jacsonfh
  */
 @WebServlet(name = "validacao", urlPatterns = {"/validacao"})
-public class validacao extends HttpServlet {
+public class Validacao extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,14 +30,16 @@ public class validacao extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String uri = request.getContextPath() + "/paginas";
         PrintWriter out = response.getWriter();
-        String nome = request.getParameter("email");
-        String password = request.getParameter("password");
-        if (nome.equals("jacsonfh@gmail.com") && (password.equals("123")) ) {
-            uri += "/perfil.html";
-            response.sendRedirect(uri);
-        } else {
-            uri += "/senha.html";
-            response.sendRedirect(uri);
+        String nome = request.getParameter("inputEmail");
+        String password = request.getParameter("inputPassword");
+        if (nome != null && password != null) {
+            if (nome.equals("jacsonfh@gmail.com")) {
+                uri += "/perfil.html";
+                response.sendRedirect(uri);
+            } else {
+                uri += "/senha.html";
+                response.sendRedirect(uri);
+            }
         }
     }
 
