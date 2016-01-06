@@ -9,23 +9,25 @@ and open the template in the editor.
         <title>::: Site Motor Realizador de Metas :::</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Aqui configuração do bootstrap. -->
-        <link href="resources/css/jacson_style.css" rel="stylesheet">
-        <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="resources/css/bootstrap-theme.css" type="text/css"/>
 
-        
+        <!-- Aqui configuração do bootstrap e css em geral. -->
+        <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="../resources/css/bootstrap-theme.css" type="text/css"/>
+        <link rel="stylesheet" href="../resources/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="../resources/css/jacson_style.css" type="text/css"/>
+
+
+
     </head>
     <body>
-        
-       <!--Aqui começa -->
+
+        <!--Aqui começa -->
         <div class="container">
             <br />
             <br />
             <p align="center">  <img class="img-responsive" src="resources/img/e-Metaslogo.jpg" width="32" height="32" alt="e-Metaslogo"/> </p>
             <br />
-            
+
             <div class="row-fluid">
                 <div class="col-md-4 col-md-offset-4" >
                     <ul class="nav nav-tabs active">
@@ -38,13 +40,10 @@ and open the template in the editor.
                 <br />
                 <!-- TODO ajustar a fonte-->
                 <!--<p class="text-center">Acesso ao eMetas</p>-->
-                 <p class="text-center">
+                <p class="text-center">
                     <i class="glyphicon glyphicon-lock" style="font-size: 12px;"></i> <span style="font-family: Verdana; font-size: 12pt;"></span>
                 </p>
- 
                 <form class="form-group text-center" name="acesso" method="post"  id="frmLogin"><!--onSubmit="return validaIndex();"-->
-                
-                    
                     <div class="btn-group">
                         <br/> 
                         <input type="email" name="inputEmail" id="inputEmail" class="row-fluid" placeholder="email" required autofocus>
@@ -55,37 +54,37 @@ and open the template in the editor.
                         <input type="password" name="inputPassword" id="inputPassword" class="row-fluid" placeholder="senha" required>
                         <button type="button" class="pull-right">?</button>
                     </div>
-                    
+
                     <div class="btn-group">
                         <div class="btn-group-sm">
                             <br/>
                             <button type="button" class="btn btn-default">Ajuda</button>
-                             
+
                             <!--<button  type="submit" class="btn btn-default" value="Acesso" onclick="validaEnviaFormulario(W,D);">Acesso</button>-->
                             <!--<input  type="button" class="btn btn-default" value="Acesso" onclick="acessar();">-->
                             <button onclick="acessar();" value="Acesso" class="btn btn-default">Acesso</button>
                             <!--<button onclick="JavaScript:alert('Well done!')">Click Me!</button>-->
-                            
+
                         </div>
                     </div>
 
                 </form>
             </div>
         </div>
-            <div class="col-lg-12">
-              <!--conteúdo do rodapé-->
-                <div class="content">
-                    <br />
-                    <!--conteúdo
-                    <div id="success" class="alert alert-success" role="alert">...</div>
-                    <div id="info" class="alert alert-info" role="alert">...</div>
-                    <div id="warn" class="alert alert-warning" role="alert">...</div>
-                    <div id="danger" class="alert alert-danger" role="alert">...</div>
-                    -->
-                </div>
-            </div>       
+        <div class="col-lg-12">
+            <!--conteúdo do rodapé-->
+            <div class="content">
+                <br />
+                <!--conteúdo
+                <div id="success" class="alert alert-success" role="alert">...</div>
+                <div id="info" class="alert alert-info" role="alert">...</div>
+                <div id="warn" class="alert alert-warning" role="alert">...</div>
+                <div id="danger" class="alert alert-danger" role="alert">...</div>
+                -->
+            </div>
+        </div>       
         <!--Scripts -->
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
         <script src="resources/js/bootstrap.min.js"></script>
@@ -93,7 +92,7 @@ and open the template in the editor.
         <script src="resources/js/jquery.mask.js"></script>
         <script src="resources/js/jquery.js" type="text/javascript"></script>
         <script src="resources/js/jquery.validate.js" type="text/javascript"></script>
-        
+
         <!-- Fim Scripts. --> 
     </body>
 </html>
