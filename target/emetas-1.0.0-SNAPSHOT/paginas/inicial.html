@@ -11,10 +11,11 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Aqui configuração do bootstrap e css em geral. -->
-        <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
-        <link rel="stylesheet" href="../resources/css/bootstrap-theme.css" type="text/css"/>
-        <link rel="stylesheet" href="../resources/css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="../resources/css/jacson_style.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/css/bootstrap-theme.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="resources/css/jacson_style.css" type="text/css"/>
+
 
 
 
@@ -38,12 +39,11 @@ and open the template in the editor.
 
             <div class="card card-container">
                 <br />
-                <!-- TODO ajustar a fonte-->
                 <!--<p class="text-center">Acesso ao eMetas</p>-->
                 <p class="text-center">
                     <i class="glyphicon glyphicon-lock" style="font-size: 12px;"></i> <span style="font-family: Verdana; font-size: 12pt;"></span>
                 </p>
-                <form class="form-group text-center" name="acesso" method="post"  id="frmLogin"><!--onSubmit="return validaIndex();"-->
+                <form action ="/ProjetoeMetas/validacao" class="form-group text-center" name="acesso" method="post"  id="frmLogin"><!--onSubmit="return validaIndex();"-->
                     <div class="btn-group">
                         <br/> 
                         <input type="email" name="inputEmail" id="inputEmail" class="row-fluid" placeholder="email" required autofocus>
