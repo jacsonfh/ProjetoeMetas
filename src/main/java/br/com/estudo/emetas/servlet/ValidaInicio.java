@@ -28,18 +28,22 @@ public class ValidaInicio extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String uri = request.getContextPath() + "/paginas";
         PrintWriter out = response.getWriter();
-        String nome = request.getParameter("inputEmail");
-        String password = request.getParameter("inputPassword");
-        if (nome != null && password != null) {
-            if (nome.equals("jacsonfh@gmail.com")) {
-                uri += "/perfil.html";
-                response.sendRedirect(uri);
-            } else {
-                uri += "/senha.html";
-                response.sendRedirect(uri);
+        try {
+            String uri = request.getContextPath() + "/paginas";
+            String nome = request.getParameter("inputEmail");
+            String password = request.getParameter("inputPassword");
+            if (nome != null && password != null) {
+                if (nome.equals("jacsonfh@gmail.com")) {
+                    uri += "/perfil.html";
+                    response.sendRedirect(uri);
+                } else {
+                    uri += "/senha.html";
+                    response.sendRedirect(uri);
+                }
             }
+        } finally {
+            out.close();
         }
     }
 

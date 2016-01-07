@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.estudo.emetas.servlet;
 
 import java.io.IOException;
@@ -34,16 +29,8 @@ public class ValidaPerfil extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ValidaPerfil</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ValidaPerfil at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            String url = request.getContextPath() + "/paginas";
+            /* TODO Validação. */
         } finally {
             out.close();
         }
