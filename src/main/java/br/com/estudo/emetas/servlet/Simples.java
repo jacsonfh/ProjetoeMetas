@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jacsonfh
  */
-public class simples extends HttpServlet {
+public class Simples extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

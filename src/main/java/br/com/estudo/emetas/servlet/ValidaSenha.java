@@ -1,8 +1,12 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package br.com.estudo.emetas.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jacsonfh
  */
-@WebServlet(name = "validacao", urlPatterns = {"/validacao"})
-public class Validacao extends HttpServlet {
+@WebServlet(name = "ValidaSenha", urlPatterns = {"/ValidaSenha"})
+public class ValidaSenha extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -28,18 +32,20 @@ public class Validacao extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String uri = request.getContextPath() + "/paginas";
         PrintWriter out = response.getWriter();
-        String nome = request.getParameter("inputEmail");
-        String password = request.getParameter("inputPassword");
-        if (nome != null && password != null) {
-            if (nome.equals("jacsonfh@gmail.com")) {
-                uri += "/perfil.html";
-                response.sendRedirect(uri);
-            } else {
-                uri += "/senha.html";
-                response.sendRedirect(uri);
-            }
+        try {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ValidaSenha</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ValidaSenha at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        } finally {
+            out.close();
         }
     }
 
@@ -81,4 +87,5 @@ public class Validacao extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }
