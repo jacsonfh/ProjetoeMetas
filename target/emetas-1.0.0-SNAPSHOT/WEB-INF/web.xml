@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
-        <servlet-name>simples</servlet-name>
-        <servlet-class>br.com.estudo.emetas.servlet.Simples</servlet-class>
+        <servlet-name>inicial</servlet-name>
+        <servlet-class>br.com.estudo.emetas.servlet.ValidaInicio</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>simples</servlet-name>
-        <url-pattern>/simples</url-pattern>
-    </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
-    </session-config>
-    
-    <servlet>
-        <servlet-name>ValidaInicio</servlet-name>
-        <servlet-class>br.com.estudo.emetas.servlet.Simples</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ValidaInicio</servlet-name>
-        <url-pattern>/ValidaInicio</url-pattern>
+        <servlet-name>inicial</servlet-name>
+        <url-pattern>/inicial</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

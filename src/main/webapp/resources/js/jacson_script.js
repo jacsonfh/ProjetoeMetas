@@ -21,7 +21,14 @@ function acessar() {
     var password = $('#inputPassword').val();
     $.ajax({
         method: "POST",
-        url: "/ProjetoeMetas/validacao",
+        url: "/ProjetoeMetas/ValidaInicio",
         data: "email=" + email + "&password=" + password
+    });
+}
+
+function ajuda() {
+    $.ajax({
+        method:"POST",
+        url:"/ProjetoeMetas/resources/doc/manual.pdf"
     });
 }
