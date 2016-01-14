@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jacsonfh
  */
-@WebServlet(name = "validacao", urlPatterns = {"/validacao"})
+@WebServlet(name = "ValidaInicio", urlPatterns = {"/ValidaInicio"})
 public class ValidaInicio extends HttpServlet {
 
     /**
@@ -34,7 +34,7 @@ public class ValidaInicio extends HttpServlet {
             String nome = request.getParameter("inputEmail");
             String password = request.getParameter("inputPassword");
             if (nome != null && password != null) {
-                if (nome.equals("jacsonfh@gmail.com")) {
+                if (nome.equals("jacsonfh@gmail.com") && password.equals("123")) {
                     uri += "/perfil.html";
                     response.sendRedirect(uri);
                 } else {
